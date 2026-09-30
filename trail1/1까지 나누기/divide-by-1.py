@@ -1,7 +1,7 @@
 n = int(input())
 i = 1
 cnt = 0
-while n >= 1:
+while n >= 0:
     n = n // i
     i += 1
     cnt += 1
