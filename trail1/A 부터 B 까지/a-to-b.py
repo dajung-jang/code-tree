@@ -1,6 +1,5 @@
 a, b = map(int, input().split())
 
-i = a
 print(a, end=' ')
 
 while a <= b:
@@ -11,3 +10,12 @@ while a <= b:
     
     if a > b: break
     print(a, end=' ')
+
+# =================
+# while a <= b:
+#     print(a, end= ' ')
+    
+#     if a % 2 != 0:
+#         a *= 2
+#     else:
+#         a += 3 
