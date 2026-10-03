@@ -5,7 +5,7 @@ def abc(y):
 
     if y % 4 == 0:
         if y % 400 != 0: result = 'false'
-        result = 'true'
+        else : result = 'true'
 
     return result
 
