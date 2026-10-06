@@ -13,16 +13,16 @@ def last_day_check(y, m):
     return 31
 
 # 해당 월의 일이 존재하는지 확인 함수
-def posi_day(m, d):
+def posi_day(y, m, d):
     return m <= 12 and d <= last_day_check(y, m)
 
 
 # 계절 출력
-def season(m):
-    if posi_day(m, d):
+def season(y, m, d):
+    if posi_day(y, m, d):
         if m in (3, 4, 5): return 'Spring'
         if m in (6, 7, 8): return 'Summer'
         if m in (9, 10, 11): return 'Fall'
         return 'Winter'
     return -1
-print(season(m))
+print(season(y, m, d))
