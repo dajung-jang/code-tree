@@ -1,18 +1,21 @@
 a, b = map(int, input().split())
 
-def abc(a, b):
+# 판단 함수
+def is_target(n):
+    if n % 3 == 0: return True
+    # if 에서 해당되면 바로 함수 종료 되니까 그것 자체로  elif 역할을 해서 
+    # elif 적어줄 필요 없음
+    while n > 0:
+        if n % 10 == 3 or n % 10 == 6 or n % 10 == 9: return True
+        n = n // 10
+    return False
+
+# 메인 함수
+def count_numbers(a, b):
     cnt = 0
     for i in range(a, b + 1):
-        bool_v = 0
-        if i % 3 == 0:
-            bool_v = 1
-        elif (i % 10 == 3 or i % 10 == 6 or i % 10 == 9):
-            bool_v = 1
-        elif bool_v == 0:
-            for j in range(1, len(str(b))+1):
-                if i // 10 ** j == 3 or i // 10 ** j == 6 or i // 10 ** j == 9:
-                    bool_v = 1
-        if bool_v == 1:
-            cnt += 1
+        if is_target(i): cnt += 1
     return cnt
-print(abc(a, b))
+
+
+print(count_numbers(a, b))
