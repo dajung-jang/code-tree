@@ -7,6 +7,8 @@ def is_target(n):
     # elif 적어줄 필요 없음
     while n > 0:
         if n % 10 == 3 or n % 10 == 6 or n % 10 == 9: return True
+        # 같은 의미 (in을 쓰면 결과를 True, False 로 반환함)
+        if (n % 10) in (3, 6, 9): return True
         n = n // 10
     return False
 
