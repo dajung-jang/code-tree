@@ -9,9 +9,7 @@ def last_day_number(m):
     return 31
 
 def judge_day(m, d):
-    if m <= 12 and d <= last_day_number(m):
-        return True
-    return False
+    return m <= 12 and d <= last_day_number(m)
 
 if judge_day(M, D): print('Yes')
 else: print('No')
