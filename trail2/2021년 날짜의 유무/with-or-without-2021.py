@@ -3,6 +3,7 @@ M, D = map(int, input().split())
 arr_31 = [1, 3, 5, 7, 8, 10, 12]
 arr_30 = [4, 6, 9, 11]
 
+
 def day_31(n):
     if n > 31: return 'No'
     for i in range(1, 32):
@@ -25,7 +26,9 @@ def day_28(n):
             break
         elif i == 29: return 'No'
 
-if M == 2: print(day_28(D))
+if M >12:
+    print('No')
+elif M == 2: print(day_28(D))
 else:
     for i in arr_30:
         if i == M:
