@@ -3,9 +3,9 @@ pattern = input()
 
 
 def is_same(n):
-    if n >= len(text): return False
+   
     for i in range(len(pattern)):
-        if text[n + i] != pattern[i]: return False
+        if n + i >= len(text) or text[n + i] != pattern[i] : return False
     return True
 
 for j in range(len(text)):
